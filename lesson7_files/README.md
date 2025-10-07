@@ -11,6 +11,7 @@ This project refactors a basic exploratory data analysis into a professional, ma
 ```
 lesson7_files/
 ├── EDA_Refactored.ipynb       # Main analysis notebook
+├── streamlit_dashboard.py      # Interactive Streamlit dashboard
 ├── data_loader.py              # Data loading and processing module
 ├── business_metrics.py         # Business metrics calculation module
 ├── requirements.txt            # Python dependencies
@@ -73,14 +74,42 @@ lesson7_files/
      - customers_dataset.csv
      - order_reviews_dataset.csv
 
-3. **Launch Jupyter Notebook**:
+3. **Launch Jupyter Notebook** (for analysis):
    ```bash
    jupyter notebook EDA_Refactored.ipynb
    ```
 
+4. **Launch Streamlit Dashboard** (for interactive visualization):
+   ```bash
+   streamlit run streamlit_dashboard.py
+   ```
+
 ## Usage Guide
 
-### Running the Analysis
+### Running the Streamlit Dashboard
+
+1. **Launch the dashboard**:
+   ```bash
+   streamlit run streamlit_dashboard.py
+   ```
+
+2. **Interact with the dashboard**:
+   - Use the date range filter in the top-right to analyze specific time periods
+   - View real-time updates to all metrics and charts
+   - Explore interactive visualizations with hover details
+   - Compare year-over-year performance automatically
+
+3. **Dashboard Features**:
+   - **Header**: Title with global date range filter
+   - **KPI Cards**: Total Revenue, Avg Monthly Growth, Average Order Value, Total Orders (all with trend indicators)
+   - **Revenue Trend Chart**: Compare current and previous year monthly performance
+   - **Top 10 Categories**: Horizontal bar chart with blue gradient
+   - **State Map**: US choropleth showing revenue by state
+   - **Satisfaction Analysis**: Review scores by delivery time buckets
+   - **Delivery Metrics**: Average delivery time with trend
+   - **Review Score**: Large star rating display with review count
+
+### Running the Jupyter Analysis
 
 1. **Open the refactored notebook**: `EDA_Refactored.ipynb`
 
